@@ -1,0 +1,5 @@
+
+
+python-dotenv # https://github.com/theskumar/python-dotenv
+
+slack_bolt # https://slack.dev/bolt-python/tutorial/getting-started
