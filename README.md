@@ -32,6 +32,27 @@ SLACK_SIGNING_SECRET="_____"
 SLACK_BOT_TOKEN="_____
 ```
 
+### Ngrok Setup
+
+> NOTE: this step is only required in development mode.
+
+See: https://api.slack.com/tutorials/tunneling-with-ngrok
+
+The Slack docs suggest we use ngrok to route requests to our localhost. I think this is because they don't allow localhost callback URLs, instead enforcing HTTPS urls (which is a good thing from a security standpoint).
+
+Installing on Mac:
+
+```sh
+brew install ngrok
+```
+
+Running the tunnel (needs to use the same port as the Slack Bolt app):
+```sh
+ngrok http 3000
+```
+
+Copy the HTTPs forwarding URL (like `https://abc123.ngrok.io`) and use it in the slack callbacks below.
+
 ### Slack Setup
 
 See: https://slack.dev/bolt-python/tutorial/getting-started
